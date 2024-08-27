@@ -14,7 +14,7 @@ class VPAApiClient(ApiClient):
 if os.environ.get("K8S_IN_CLUSTER_CLIENT", "").lower() == "true":
     config.load_incluster_config()
 else:
-    load_incluster_config()
+    config.load_incluster_config()
 
 core_api = client.CoreV1Api()
 apps_api = client.AppsV1Api()
